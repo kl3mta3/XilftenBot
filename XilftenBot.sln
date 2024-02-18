@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XilftenBot", "XilftenBot.csproj", "{38A936CD-A3FC-4147-9CB2-D305CAA52659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CB863AE-E2A0-4723-AD72-6C16E8E36E6E}"
+	ProjectSection(SolutionItems) = preProject
+		HelpCommand.cs = HelpCommand.cs
+		Movie.cs = Movie.cs
+		RadarrCommand.cs = RadarrCommand.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A936CD-A3FC-4147-9CB2-D305CAA52659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A936CD-A3FC-4147-9CB2-D305CAA52659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A936CD-A3FC-4147-9CB2-D305CAA52659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A936CD-A3FC-4147-9CB2-D305CAA52659}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {953AC62A-52D1-422C-AEA2-0205DD56E3C9}
+	EndGlobalSection
+EndGlobal
