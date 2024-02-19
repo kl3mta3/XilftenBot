@@ -112,7 +112,8 @@ Once done, save, rebuild the project and restart the app. Now it will register t
 >removed without the use of an API call or by deleting the app on Discord.com and rebuilding a new bot there.
 
 <br/>
-### Best Discord Setting for XilftenBot
+
+### **Best Discord Setting for XilftenBot**
 
 Our Application Command including the ones requiring Admin Access are all visible. 
 
@@ -126,17 +127,24 @@ We need to create Two more. For this guide we will call them CanAddShows and Can
 
 To create a new role, Go to the server setting by clicking the icon to the right of the server name in Discord.
 
-Once in settings Click on Roles, then "Creat Role" give the roll a name and save. 
+Once in settings Click on Roles, then "Create Role" give the roll a name and save. 
 
 After you have both roles made we need assign CanAddShows to anyone we want to access /TV to add shows and assign CanAddMovies to people we want to have access to /Movies.
 This allows us to restrict each action to a user incase we want some poeple to only add one or the other. 
 
 **_Permissions_**
+
 Now we need to set the permissions for the commands to all and show for only the roles we want. Head to your Servers Settings again by clicking on the icon to the right of the name. 
 This time we need to click on Intergrations in the Apps section.
 
 Here you should see your bots name  in its tab under "Bots and Apps". Click on "Manage", located on the right of your bots tab.
+We need to add the 3 roles we want and give access. but we also need to remove access for @everyone so only the people we want can see and interact with the bot.
 
+Set it as in the image below.
+
+![Bot Permissions](https://github.com/kl3mta3/XilftenBot/assets/15388851/45488fe6-78a8-4362-a641-84d2f1af1a08)
+
+Below this you will see a list of all the commands XilftenBot registered with Discord when it Connected.
 
 
 
