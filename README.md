@@ -148,6 +148,8 @@ Below this you will see a list of all the commands XilftenBot registered with Di
 
 ![commands1](https://github.com/kl3mta3/XilftenBot/assets/15388851/d55224a5-7904-43d4-92c7-4a48bd509c55)
 
+Go through each command and Set its permissions, Keep in mind only CanAddShows and Admin should have access to /TV and only CanAddMovie and Admin should have access to /Movies
+
 
 
 <br/>
