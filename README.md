@@ -88,15 +88,52 @@ XilftenBot uses Application Commands.  Application commands come in two options 
 Due to the nature of the Tasks XilftenBot performs, by default it is set to use Guild Specific Application Commands.
 This ensures if you accidentally make the bot public and someone adds it to their Discord server, they can't affect Sonarr or Radarr. 
 
-If you wish the Commands to be accessable Globally open the project in your editor or choice and Change the code below then rebuild the project and restart the app.
+If you wish the Commands to be accessable Globally ( Work in many Servers) it can be done as follows.
+
+Open the file Xilften.cs and locate the following code.
+```
+var slash = discord.UseSlashCommands();
+slash.RegisterCommands<RadarrCommand>(guildID);
+slash.RegisterCommands<BotCommand>(guildID);
+slash.RegisterCommands<SonarrCommand>(guildID);
+```
+
+Change it to,
+```
+var slash = discord.UseSlashCommands();
+slash.RegisterCommands<RadarrCommand>();
+slash.RegisterCommands<BotCommand>();
+slash.RegisterCommands<SonarrCommand>();
+
+```
+Once done, save, rebuild the project and restart the app. Now it will register the Application Commands Globally
 >[!Warning]
 >Global Application commands can take an hour to register with Discord, And once Registered can not be
 >removed without the use of an API call or by deleting the app on Discord.com and rebuilding a new bot there.
 
 <br/>
-<br/>
-<br/>
-<br/>
+### Best Discord Setting for XilftenBot
+
+Our Application Command including the ones requiring Admin Access are all visible. 
+
+To better ensure only the users we want to use the commands can see them we need to change a few settings in the Discord server. 
+
+~Roles~
+To aid in the above goal we need to create a few rolls. We Assume you already have an Admin roll with Admin access.
+
+We need to create Two more. For this guide we will call them CanAddShows and CanAddMovies.
+
+To create a new role, Go to the server setting by clicking the icon to the right of the server name in Discord.
+
+Once in settings Click on Roles, then "Creat Role" give the roll a name and save. 
+
+After you have both roles made we need assign CanAddShows to anyone we want to access /TV to add shows and assign CanAddMovies to people we want to have access to /Movies.
+This allows us to restrict each action to a user incase we want some poeple to only add one or the other. 
+
+
+
+
+
 
 
 ## **Create A Discord Bot**
