@@ -26,7 +26,7 @@ If you do not have Sonarr installed Documents and download can be found at http:
 If you do not have Radarr installed Documents and download can be found at http://Radarr.video.
 
 XilftenBot is a preProgramed Discord bot, and needs a Bot Token provided by Discord you can get one at http://discord.com/developers.
-A guide to creating it can be found [here](#create-a-discord-bot)
+A guide to creating it can be found [here](#creating-your-discord-bot)
 
 <br/>
 <br/>
@@ -211,24 +211,118 @@ Respond with the "okay" emoji :ok_hand: within 30 seconds and it will add the mo
 
 <br/>
 
+If you need help, have suggestions, or need to report a bug. Join the Discord at https://discord.gg/S8vdPAsdzH.
 
 
+<br/>
+<br/>
+<br/>
+That's it you are done.  Why are you still here?  Go add shows to your server!
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Below is the guide for creating your server if you dont have one.  XilftenBots specificly needed permissions and Intents are provided within the guide id you need them.
+But if youve gotten this far aleady you dont need to worry with it.  
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+keep going
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+almost there
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+You made it.
+<br/>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-## Create A Discord Bot
+## Creating Your Discord Bot
 
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
 
@@ -272,7 +366,9 @@ Step 6: Go to “OAuth2” and in the field “Scopes” check the box for “bo
 <sub>Under “OAuth2”, you can set the permission for your bot.<sub/>
 <br/>
 
-///include permissions needed for users here
+Here is the XilftenBots minimum permissions.
+
+![minimumBotPermissions](https://github.com/kl3mta3/XilftenBot/assets/15388851/d6ead0ab-de6e-4a59-98d4-ea9f9c4b7f48)
 
 Step 7: The authentication link including client ID should look as follows:
 
@@ -283,5 +379,14 @@ Step 7: The authentication link including client ID should look as follows:
 
 
 Step 8: Select your Discord server in order to add the bot to your server.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 
