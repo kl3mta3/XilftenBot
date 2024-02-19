@@ -21,6 +21,12 @@ This guide assumes you have Sonarr and Radarr installed and accessable outside o
 > You can use localHost. You just have to ensure XilftenBot runs on the same machine as Sonarr and Radarr.
 <br/>
 
+If you do not have Sonarr installed Documents and download can be found at http://Sonarr.tv .
+If you do not have Radarr installed Documents and download can be found at http://Radarr.video .
+
+XilftenBot is a preProgramed Discord bot, and needs a Bot Token provided by Discord you can get one at http://discord.com/developers .
+A guide to creating it can be found [Here](#-create-c-discord-bot)
+
 ### **Installation:**
 Download the zip or complie and build XilftenBot.
 
@@ -57,6 +63,15 @@ Inside you will find the following config file. We need to fill this in to Confi
 </configuration>
 
 ```
+You can see we need 6 pieces of Information to fully Configure the bot. 
+
+1. Discord Token is provided when you create the bot on Discord.com/Developers 
+
+
+## **Create A Discord Bot**
+
+Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
+
 Commands Available:
 /TV SeriesName (Year)  Searches for a Series.
 /Movie MovieName (Year)  Searches for a Movie.
