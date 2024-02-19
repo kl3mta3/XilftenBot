@@ -146,6 +146,7 @@ Set it as in the image below.
 
 Below this you will see a list of all the commands XilftenBot registered with Discord when it Connected.
 
+![commands1](https://github.com/kl3mta3/XilftenBot/assets/15388851/d55224a5-7904-43d4-92c7-4a48bd509c55)
 
 
 
