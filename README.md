@@ -72,6 +72,31 @@ You can see we need 6 pieces of Information to fully Configure the bot.
 
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
 
+![how-to-activate-developer-mode](https://github.com/kl3mta3/XilftenBot/assets/15388851/0ba1c4b1-a314-4449-814a-776ba3022ad6)
+Activate “Developer Mode” in your Discord account and then click on “Discord API”
+
+Step 2: In the Developer Portal, click on “Applications” in the sidebar on the left. Log in to your account again and then click on “New Application”.
+
+
+Step 3: Give your bot a name and then click on “Create”.
+
+
+Step 4: Click on “Bot” in the left sidebar, then click on “Add Bot” to create a bot account and bot token. Take note of the token, as this is the how the bot communicates with the API.
+
+
+Step 5: Now it’s time to start programming your bot. Since this involves advanced programming steps, you should have previous knowledge of programming languages and tools. Use an IDEA programming environment, programming tools like Python 3 or node.js, or a text editor like Notepad++. After you’ve written the bot, save the bot file.
+
+
+Step 6: Back in Developer Mode in Discord, go to “General Information” and set details like the description and app icon.
+
+Step 7: Go to “OAuth2” and in the field “Scopes” check the box for “bot”. Then set the permissions for your Discord bot.
+
+///include permissions needed for users here
+
+Step 8: The authentication link including client ID should look as follows:
+
+Step 9: Select your Discord server in order to add the bot to your server.
+
 Commands Available:
 /TV SeriesName (Year)  Searches for a Series.
 /Movie MovieName (Year)  Searches for a Movie.
