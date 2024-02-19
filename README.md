@@ -226,8 +226,8 @@ That's it you are done.  Why are you still here?  Go add shows to your server!
 <br/>
 <br/>
 <br/>
-Below is the guide for creating your server if you dont have one.  XilftenBots specificly needed permissions and Intents are provided within the guide id you need them.
-But if youve gotten this far aleady you dont need to worry with it.  
+Below is the guide for creating your discord bot if you dont have one.  XilftenBots specificly needed permissions and Intents are provided within the guide I'd you need them.
+But if you've gotten this far aleady you dont need to worry with it.  
 <br/>
 <br/>
 <br/>
@@ -253,7 +253,7 @@ But if youve gotten this far aleady you dont need to worry with it.
 <br/>
 <br/>
 <br/>
-keep going
+Keep going.
 <br/>
 <br/>
 <br/>
@@ -273,7 +273,7 @@ keep going
 <br/>
 <br/>
 <br/>
-almost there
+Almost there.
 <br/>
 <br/>
 <br/>
@@ -385,8 +385,5 @@ Step 8: Select your Discord server in order to add the bot to your server.
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 
