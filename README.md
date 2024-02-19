@@ -31,7 +31,7 @@ A guide to creating it can be found below.
 <br/>
 <br/>
 
-## **Installation:**
+### **Installation:**
 
 Download the zip or complie and build XilftenBot.
 
@@ -83,7 +83,7 @@ Once we have all that entered we can start the bot.  Thats it, it is ready to us
 <br/>
 <br/>
 
-## **Using the Bot Inside Discord**
+### **Using the Bot Inside Discord**
 
 XilftenBot uses Application Commands.  Application commands come in two options Global(work on every server the bot is on) and Guild(Server) specific. 
 Due to the nature of the Tasks XilftenBot performs, by default it is set to use Guild Specific Application Commands.
@@ -122,7 +122,7 @@ To better ensure only the users we want to use the commands can see them we need
 
 <br/>
 
-**_Roles_**
+#### **_Roles_**
 
 To aid in the above goal we need to create a few rolls. We Assume you already have an Admin roll with Admin access.
 
@@ -137,7 +137,7 @@ This allows us to restrict each action to a user incase we want some poeple to o
 
 <br/>
 
-**_Permissions_**
+#### **_Permissions_**
 
 Now we need to set the permissions for the commands to all and show for only the roles we want. Head to your Servers Settings again by clicking on the icon to the right of the name. 
 This time we need to click on Intergrations in the Apps section.
@@ -168,10 +168,52 @@ Go through each command and Set its permissions, Keep in mind
 
 ![movieCommandPermission](https://github.com/kl3mta3/XilftenBot/assets/15388851/3c2cce7d-7d94-4bb2-9a06-ef20e5968f54)
 
+Thats it Save your settings and Its all set up and ready for users to use. 
+
+
+### **Using The Commands**
+
+#### How to search for a series.
+
+Go to the Request channel and Type / Discord will suggest possible commands. 
+Choose Tv or type Tv and press space. Then provide a show name and ideally year in the format "SeriesName (2024)".
+
+If the Show exists on the server you will Recieve a respons like the following. Showing the shows info. 
+
+![tvrequestontherserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/509c7d54-eabc-478f-b649-6697a2cbd166)
+
+If the show doesnt exist then You will receive a reponse like this.
+
+![Shownotonserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/cc6335e9-97d8-4ac1-b126-10aa5eba0803)
+
+Respond with the "okay" emoji :ok_hand: within 30 seconds and it will add the show to the server.
+
+![showaddedtoserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/05957548-ac68-4dd7-b112-238a3715ede9)
+
+<br/>
+
+#### How to search for a movie.
+
+Go to the Request channel and Type / Discord will suggest possible commands. 
+Choose Movie or type movie and press space. Then provide a movie name and ideally year in the format "MovieName (2024)".
+
+If the movie exists on the server you will Recieve a response like the following. Showing the movie info. 
+
+![Movieonserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/5892d709-e7ba-49f5-ad2d-15d5ab48f401)
+
+If the movie doesnt exist then You will receive a reponse like this.
+
+![Movienotonserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/f6f5ee82-fe1e-4dfd-b8c9-ccaa747d81f9)
+
+Respond with the "okay" emoji :ok_hand: within 30 seconds and it will add the movie to the server.
+
+![moviesaddedtoserver](https://github.com/kl3mta3/XilftenBot/assets/15388851/fd99797a-44ee-421b-9aa1-8d8c09da7740)
+
+<br/>
 
 
 
-<br/>
+
 <br/>
 <br/>
 <br/>
@@ -186,7 +228,7 @@ Go through each command and Set its permissions, Keep in mind
 <br/>
 <br/>
 
-## **Create A Discord Bot**
+## Create A Discord Bot
 
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
 
@@ -242,11 +284,4 @@ Step 7: The authentication link including client ID should look as follows:
 
 Step 8: Select your Discord server in order to add the bot to your server.
 <br/>
-
-Commands Available:
-/TV SeriesName (Year)  Searches for a Series.
-/Movie MovieName (Year)  Searches for a Movie.
-/Help Provides a Pm with all the Commands.
-
-Available for Admins:
 
