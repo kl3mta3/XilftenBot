@@ -26,7 +26,7 @@ If you do not have Sonarr installed Documents and download can be found at http:
 If you do not have Radarr installed Documents and download can be found at http://Radarr.video.
 
 XilftenBot is a preProgramed Discord bot, and needs a Bot Token provided by Discord you can get one at http://discord.com/developers.
-A guide to creating it can be found below.
+A guide to creating it can be found [here](#create-a-discord-bot)
 
 <br/>
 <br/>
