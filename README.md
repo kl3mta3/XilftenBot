@@ -153,9 +153,14 @@ Go through each command and Set its permissions, Keep in mind
 * Only CanAddShows and Admin should have access to /TV
 * Only CanAddMovie and Admin should have access to /Movies
 * All Commands should have @everyone restricted.
-* All COmmands should have Admin Allowed.
+* All Commands should have Admin Allowed.
 
-  
+
+![helpCommandPermission](https://github.com/kl3mta3/XilftenBot/assets/15388851/555be194-e03b-4275-b4b5-de0834a5e393)
+
+ For /TV and /Movies we need to also Restrict requests to the channel for requests. This is to keep the server clean and prevent Requests from cluttering up every channel.
+
+
 
 
 
