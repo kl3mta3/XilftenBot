@@ -32,6 +32,7 @@ A guide to creating it can be found below.
 <br/>
 
 ## **Installation:**
+
 Download the zip or complie and build XilftenBot.
 
 Inside the folder you will find a file named "XilftenBot.dll.config".
@@ -119,6 +120,8 @@ Our Application Command including the ones requiring Admin Access are all visibl
 
 To better ensure only the users we want to use the commands can see them we need to change a few settings in the Discord server. 
 
+<br/>
+
 **_Roles_**
 
 To aid in the above goal we need to create a few rolls. We Assume you already have an Admin roll with Admin access.
@@ -131,6 +134,8 @@ Once in settings Click on Roles, then "Create Role" give the roll a name and sav
 
 After you have both roles made we need assign CanAddShows to anyone we want to access /TV to add shows and assign CanAddMovies to people we want to have access to /Movies.
 This allows us to restrict each action to a user incase we want some poeple to only add one or the other. 
+
+<br/>
 
 **_Permissions_**
 
@@ -158,26 +163,29 @@ Go through each command and Set its permissions, Keep in mind
 
 ![helpCommandPermission](https://github.com/kl3mta3/XilftenBot/assets/15388851/555be194-e03b-4275-b4b5-de0834a5e393)
 
- For /TV and /Movies we need to also Restrict requests to the channel for requests. This is to keep the server clean and prevent Requests from cluttering up every channel.
+ For /TV and /Movies we need to also restrict requests to the specific channel for requests. This is to keep the server clean and prevent Requests from cluttering up every channel.
+ click on add channel and choose a channel.
+
+![movieCommandPermission](https://github.com/kl3mta3/XilftenBot/assets/15388851/3c2cce7d-7d94-4bb2-9a06-ef20e5968f54)
 
 
 
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 ## **Create A Discord Bot**
 
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
