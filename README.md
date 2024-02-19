@@ -118,7 +118,8 @@ Our Application Command including the ones requiring Admin Access are all visibl
 
 To better ensure only the users we want to use the commands can see them we need to change a few settings in the Discord server. 
 
-~Roles~
+**_Roles_**
+
 To aid in the above goal we need to create a few rolls. We Assume you already have an Admin roll with Admin access.
 
 We need to create Two more. For this guide we will call them CanAddShows and CanAddMovies.
@@ -130,12 +131,30 @@ Once in settings Click on Roles, then "Creat Role" give the roll a name and save
 After you have both roles made we need assign CanAddShows to anyone we want to access /TV to add shows and assign CanAddMovies to people we want to have access to /Movies.
 This allows us to restrict each action to a user incase we want some poeple to only add one or the other. 
 
+**_Permissions_**
+Now we need to set the permissions for the commands to all and show for only the roles we want. Head to your Servers Settings again by clicking on the icon to the right of the name. 
+This time we need to click on Intergrations in the Apps section.
+
+Here you should see your bots name  in its tab under "Bots and Apps". Click on "Manage", located on the right of your bots tab.
 
 
 
 
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 ## **Create A Discord Bot**
 
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
