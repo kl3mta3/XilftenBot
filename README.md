@@ -73,29 +73,62 @@ You can see we need 6 pieces of Information to fully Configure the bot.
 Step 1: Log into your Discord account and click on “Advanced” in the sidebar. Then activate “Developer Mode”. Then click on “Discord API”.
 
 ![how-to-activate-developer-mode](https://github.com/kl3mta3/XilftenBot/assets/15388851/0ba1c4b1-a314-4449-814a-776ba3022ad6)
-Activate “Developer Mode” in your Discord account and then click on “Discord API”
+
+<sub>Activate “Developer Mode” in your Discord account and then click on “Discord API”<sub/>
+<br/>
 
 Step 2: In the Developer Portal, click on “Applications” in the sidebar on the left. Log in to your account again and then click on “New Application”.
 
+![New-application](https://github.com/kl3mta3/XilftenBot/assets/15388851/951f6e4a-05b5-4d91-86e3-cd207207b4f5)
 
+<sub>Click on “Applications” and then “New Application”.<sub/>
+<br/>
 Step 3: Give your bot a name and then click on “Create”.
 
+![step 3](https://github.com/kl3mta3/XilftenBot/assets/15388851/e2d40029-504c-40a1-9426-fd2292794984)
+
+<sub>Choose a name for your bot and then click “Create”<sub/>
+<br/>
 
 Step 4: Click on “Bot” in the left sidebar, then click on “Add Bot” to create a bot account and bot token. Take note of the token, as this is the how the bot communicates with the API.
 
+![step 4](https://github.com/kl3mta3/XilftenBot/assets/15388851/cb658493-1449-4461-9527-dc0ade4a066e)
+
+<sub><sub/>
+<br/>
 
 Step 5: Now it’s time to start programming your bot. Since this involves advanced programming steps, you should have previous knowledge of programming languages and tools. Use an IDEA programming environment, programming tools like Python 3 or node.js, or a text editor like Notepad++. After you’ve written the bot, save the bot file.
 
+![step 5](https://github.com/kl3mta3/XilftenBot/assets/15388851/04716aad-2b23-47b8-a39b-393603a0ac19)
+
+<sub><sub/>
+<br/>
 
 Step 6: Back in Developer Mode in Discord, go to “General Information” and set details like the description and app icon.
 
+![step 6](https://github.com/kl3mta3/XilftenBot/assets/15388851/7e8bc0eb-ece8-4721-8c30-824cd1765ed2)
+
+<sub/><sub/>
+<br/>
+
 Step 7: Go to “OAuth2” and in the field “Scopes” check the box for “bot”. Then set the permissions for your Discord bot.
+
+![step 7](https://github.com/kl3mta3/XilftenBot/assets/15388851/1cec5df8-8125-411b-b0a8-6d480f157570)
+
+<sub><sub/>
+<br/>
 
 ///include permissions needed for users here
 
 Step 8: The authentication link including client ID should look as follows:
 
+
+<sub><sub/>
+<br/>
+
+
 Step 9: Select your Discord server in order to add the bot to your server.
+<br/>
 
 Commands Available:
 /TV SeriesName (Year)  Searches for a Series.
