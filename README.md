@@ -21,16 +21,21 @@ This guide assumes you have Sonarr and Radarr installed and accessable outside o
 > You can use localHost. You just have to ensure XilftenBot runs on the same machine as Sonarr and Radarr.
 <br/>
 
-If you do not have Sonarr installed Documents and download can be found at http://Sonarr.tv .
-If you do not have Radarr installed Documents and download can be found at http://Radarr.video .
+If you do not have Sonarr installed Documents and download can be found at http://Sonarr.tv.
 
-XilftenBot is a preProgramed Discord bot, and needs a Bot Token provided by Discord you can get one at http://discord.com/developers .
-A guide to creating it can be found [Here](#-create-c-discord-bot)
+If you do not have Radarr installed Documents and download can be found at http://Radarr.video.
 
-### **Installation:**
+XilftenBot is a preProgramed Discord bot, and needs a Bot Token provided by Discord you can get one at http://discord.com/developers.
+A guide to creating it can be found below.
+
+<br/>
+<br/>
+
+## **Installation:**
 Download the zip or complie and build XilftenBot.
 
 Inside the folder you will find a file named "XilftenBot.dll.config".
+
 Open the file in notepad or your editor of choice. 
 
 Inside you will find the following config file. We need to fill this in to Configure XilftenBot to our Discored, Sonarr and Radarr servers.
@@ -65,7 +70,33 @@ Inside you will find the following config file. We need to fill this in to Confi
 ```
 You can see we need 6 pieces of Information to fully Configure the bot. 
 
-1. Discord Token is provided when you create the bot on Discord.com/Developers 
+1. Token is your Bots Token provided when you create the bot on Discord.com/Developers. Ex: 1231d12dasda98sdahsd.123kj12k3j12kmdk12jnb
+2. GuildId id the Id of the Discord server you added to bot to. You can get this by right clicking the server name at the top, in Discord and clicking copy Server ID
+3. SonarrAPI is your Sonarr API Key  and is Located in Sonarr Settings/General/Security.
+4. Sonarr IP is the address in your browser when you connect to Sonarr with. Ex: http://123.456.7.8:8989/ or http://localhost:8989/
+5. RadarrAPI is your Radarr API Key  and is Located in Radarr Settings/General/Security.
+6. Radarr IP is the address in your browser when you connect to Radarr with. Ex: http://123.456.7.8:7878/ or http://localhost:7878/
+
+Once we have all that entered we can start the bot.  Thats it, it is ready to use from Discord.
+
+<br/>
+<br/>
+
+## **Using the Bot Inside Discord**
+
+XilftenBot uses Application Commands.  Application commands come in two options Global(work on every server the bot is on) and Guild(Server) specific. 
+Due to the nature of the Tasks XilftenBot performs, by default it is set to use Guild Specific Application Commands.
+This ensures if you accidentally make the bot public and someone adds it to their Discord server, they can't affect Sonarr or Radarr. 
+
+If you wish the Commands to be accessable Globally open the project in your editor or choice and Change the code below then rebuild the project and restart the app.
+>[!Warning]
+>Global Application commands can take an hour to register with Discord, And once Registered can not be
+>removed without the use of an API call or by deleting the app on Discord.com and rebuilding a new bot there.
+
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 ## **Create A Discord Bot**
@@ -94,40 +125,35 @@ Step 4: Click on “Bot” in the left sidebar, then click on “Add Bot” to c
 
 ![step 4](https://github.com/kl3mta3/XilftenBot/assets/15388851/cb658493-1449-4461-9527-dc0ade4a066e)
 
-<sub><sub/>
+<sub>Click on “Add Bot” to generate a Bot token.<sub/>
 <br/>
 
-Step 5: Now it’s time to start programming your bot. Since this involves advanced programming steps, you should have previous knowledge of programming languages and tools. Use an IDEA programming environment, programming tools like Python 3 or node.js, or a text editor like Notepad++. After you’ve written the bot, save the bot file.
 
-![step 5](https://github.com/kl3mta3/XilftenBot/assets/15388851/04716aad-2b23-47b8-a39b-393603a0ac19)
-
-<sub><sub/>
-<br/>
-
-Step 6: Back in Developer Mode in Discord, go to “General Information” and set details like the description and app icon.
+Step 5: Back in Developer Mode in Discord, go to “General Information” and set details like the description and app icon.
 
 ![step 6](https://github.com/kl3mta3/XilftenBot/assets/15388851/7e8bc0eb-ece8-4721-8c30-824cd1765ed2)
 
-<sub/><sub/>
+<sub/>Under “General Information”, you can set details like a description and icon for your bot.<sub/>
 <br/>
 
-Step 7: Go to “OAuth2” and in the field “Scopes” check the box for “bot”. Then set the permissions for your Discord bot.
+Step 6: Go to “OAuth2” and in the field “Scopes” check the box for “bot”. Then set the permissions for your Discord bot.
 
 ![step 7](https://github.com/kl3mta3/XilftenBot/assets/15388851/1cec5df8-8125-411b-b0a8-6d480f157570)
 
-<sub><sub/>
+<sub>Under “OAuth2”, you can set the permission for your bot.<sub/>
 <br/>
 
 ///include permissions needed for users here
 
-Step 8: The authentication link including client ID should look as follows:
+Step 7: The authentication link including client ID should look as follows:
 
+![step 8](https://github.com/kl3mta3/XilftenBot/assets/15388851/4246e62b-c538-4d7a-88b5-a564a7462a0c)
 
-<sub><sub/>
+<sub>Take care of the final settings for your bot and click “Copy”.<sub/>
 <br/>
 
 
-Step 9: Select your Discord server in order to add the bot to your server.
+Step 8: Select your Discord server in order to add the bot to your server.
 <br/>
 
 Commands Available:
