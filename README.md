@@ -226,7 +226,7 @@ That's it you are done.  Why are you still here?  Go add shows to your server!
 <br/>
 <br/>
 <br/>
-Below is the guide for creating your discord bot if you dont have one.  XilftenBots specificly needed permissions and Intents are provided within the guide I'd you need them.
+Below is the guide for creating your discord bot if you dont have one.  XilftenBots specificlly needed permissions and Intents are provided within the guide I'd you need them.
 But if you've gotten this far aleady you dont need to worry with it.  
 <br/>
 <br/>
