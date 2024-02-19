@@ -133,7 +133,7 @@ To create a new role, Go to the server setting by clicking the icon to the right
 Once in settings Click on Roles, then "Create Role" give the roll a name and save. 
 
 After you have both roles made we need assign CanAddShows to anyone we want to access /TV to add shows and assign CanAddMovies to people we want to have access to /Movies.
-This allows us to restrict each action to a user incase we want some poeple to only add one or the other. 
+This allows us to restrict each action to a user incase we want some people to only add one or the other. 
 
 <br/>
 
