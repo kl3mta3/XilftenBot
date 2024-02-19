@@ -39,7 +39,7 @@ Inside the folder you will find a file named "XilftenBot.dll.config".
 
 Open the file in notepad or your editor of choice. 
 
-Inside you will find the following config file. We need to fill this in to Configure XilftenBot to our Discored, Sonarr and Radarr servers.
+Inside you will find the following config file. We need to fill this in to Configure XilftenBot to our Discord, Sonarr and Radarr servers.
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
