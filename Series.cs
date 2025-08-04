@@ -208,7 +208,7 @@ namespace XilftenBot
    public partial class Ratings
     {
         [JsonProperty("value")]
-        public  int value { get; set; }
+        public  float value { get; set; }
 
         [JsonProperty("votes")]
         public  int votes { get; set; }

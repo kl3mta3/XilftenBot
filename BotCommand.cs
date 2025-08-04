@@ -182,73 +182,73 @@ namespace XilftenBot
         }
 
         //Gets the requests for a user with the time frame(7 days,30 days, all time)
-        [SlashCommand("UserRequests", "Get Requests for a user in a time frame!")]
-        public async Task UserRequests(InteractionContext ctx, [Option("user", "User to search Request history")] DiscordUser  member,
-            [Choice("7 days", 7)]
-            [Choice("30 days", 30)]
-            [Choice("all time", 0)]
-            [Option("searchTime", "Number of days to search requests")] long searchTime = 0)
-        {
-            var user = ctx.Member;
+        //[SlashCommand("UserRequests", "Get Requests for a user in a time frame!")]
+        //public async Task UserRequests(InteractionContext ctx, [Option("user", "User to search Request history")] DiscordUser  member,
+        //    [Choice("7 days", 7)]
+        //    [Choice("30 days", 30)]
+        //    [Choice("all time", 0)]
+        //    [Option("searchTime", "Number of days to search requests")] long searchTime = 0)
+        //{
+        //    var user = ctx.Member;
 
-            // Check if the user has admin access
-            if (user.Permissions.HasPermission(Permissions.Administrator))
-            {
-                var em = new DiscordEmbedBuilder
-                {
-                    Color = DiscordColor.Azure,
-                    Title = $"Requests Search",
-                    Description = $"Requests for User {member.Username}."
-                };
+        //    // Check if the user has admin access
+        //    if (user.Permissions.HasPermission(Permissions.Administrator))
+        //    {
+        //        var em = new DiscordEmbedBuilder
+        //        {
+        //            Color = DiscordColor.Azure,
+        //            Title = $"Requests Search",
+        //            Description = $"Requests for User {member.Username}."
+        //        };
 
-                int index = 0;
+        //        int index = 0;
 
-                //Loop Through requests and check the time frame
-                foreach (var date in Xilften.requests)
-                {
-                    if (date.Value.memberName == member.Username)
-                    {
-                        DateTime dateTimeToCheck = date.Key;
+        //        //Loop Through requests and check the time frame
+        //        foreach (var date in Xilften.requests)
+        //        {
+        //            if (date.Value.memberName == member.Username)
+        //            {
+        //                DateTime dateTimeToCheck = date.Key;
 
-                        TimeSpan difference = DateTime.Now - dateTimeToCheck;
+        //                TimeSpan difference = DateTime.Now - dateTimeToCheck;
 
 
-                        //Swwitch Case to manage the time frame option chose.
-                        switch (searchTime)
-                        {
-                            case 0:
-                                em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
-                                index++;
-                                break;
+        //                //Swwitch Case to manage the time frame option chose.
+        //                switch (searchTime)
+        //                {
+        //                    case 0:
+        //                        em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
+        //                        index++;
+        //                        break;
 
-                            case 7:
-                                if (difference.TotalDays <= 7)
-                                {
-                                    em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
-                                    index++;
-                                }
-                                break;
+        //                    case 7:
+        //                        if (difference.TotalDays <= 7)
+        //                        {
+        //                            em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
+        //                            index++;
+        //                        }
+        //                        break;
 
-                            case 30:
-                                if (difference.TotalDays <= 30)
-                                {
-                                    em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
-                                    index++;
-                                }
-                                break;
-                        }
-                    }
-                }
+        //                    case 30:
+        //                        if (difference.TotalDays <= 30)
+        //                        {
+        //                            em.AddField($"{date.Value.dateMade}:", $"{date.Value.request} , Added:{date.Value.wasAdded} ", false);
+        //                            index++;
+        //                        }
+        //                        break;
+        //                }
+        //            }
+        //        }
 
-                //Build the embed
-                em.Build();
+        //        //Build the embed
+        //        em.Build();
 
-                // Send the embed to the user in a Private Message
-                await user.SendMessageAsync(embed: em);
-            }
-            else //If the user does not have admin access
-            { await user.SendMessageAsync($"You do not have the Authority to access this command. This strike has been noted.  Continued use of this command will result in your Automatic ban from the server."); }
+        //        // Send the embed to the user in a Private Message
+        //        await user.SendMessageAsync(embed: em);
+        //    }
+        //    else //If the user does not have admin access
+        //    { await user.SendMessageAsync($"You do not have the Authority to access this command. This strike has been noted.  Continued use of this command will result in your Automatic ban from the server."); }
 
-        }
+        //}
     }
 }

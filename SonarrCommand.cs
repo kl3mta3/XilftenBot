@@ -18,6 +18,8 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity.Extensions;
 using XilftenBot;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Http.Headers;
 
 namespace XilftenBot
 {
@@ -65,7 +67,7 @@ namespace XilftenBot
                                 string path = "";
                                 string imdbId = "";
                                 string monitor = "";
-
+                                int _qualityProfileId = 1;
                                 bool searchForMissingEpisodes = true;
                                 bool searchForCutoffUnmetEpisodes = false;
 
@@ -79,10 +81,15 @@ namespace XilftenBot
                                 //Use Try Catch to get the values from the JSON so empty doesnt Crash bot.
                                 try { imdbId = getSeriesObj["imdbId"].ToString(); } catch { }
                                 try { path = getSeriesObj["path"].ToString(); } catch { }
-                                try { monitor = getSeriesObj["monitorNewItems"].ToString(); } catch { }
+                                try { path = getSeriesObj["qualityProfileId"].ToString(); } catch { }
+                                try { monitor = getSeriesObj["monitor"].ToString(); } catch { }
+
+
 
                                 // Deserialize JSON String into a Series Object.
                                 var seriesDeserializedGet = JsonConvert.DeserializeObject<Series>(getSeriesString);
+
+                                
 
                                 //Create a new Request Object.
                                 var newRequest = new Request
@@ -91,13 +98,17 @@ namespace XilftenBot
                                     request=showName,
                                     dateMade=DateTime.Now,
                                     title=seriesDeserializedGet.title,
-                                
+                                    
+
                                 };
 
                                 //If we have a path, the show is already on the server.
-                                if (path != "")
-                                {
-
+                                Console.WriteLine("path= " + path);
+                                string _path = "X:";
+                                //if (path != "")
+                                if (path.Contains("X:"))
+                                    {
+                                    Console.WriteLine("Is on server Triggered");
                                     //Create an Embed to send.
                                     var em = new DiscordEmbedBuilder
                                     {
@@ -117,7 +128,12 @@ namespace XilftenBot
                                     em.AddField("Status: ", $"{seriesDeserializedGet.status}", true);
                                     em.AddField("Network: ", $"{seriesDeserializedGet.network}", true);
                                     em.AddField("First Aired: ", $"{seriesDeserializedGet.firstAired}", true);
-                                    em.AddField("Overview: ", $"{seriesDeserializedGet.overview}", false);
+                                    // cut overview to fit incase its too long.
+                                    string _overview = seriesDeserializedGet.overview.Length > 1000
+                                        ? seriesDeserializedGet.overview.Substring(0, 1000)
+                                        : seriesDeserializedGet.overview;
+
+                                    em.AddField("Overview: ", $"{_overview}", false);
                                     em.Build();
 
                                     //Create the Webhook and add the Embed.
@@ -132,41 +148,9 @@ namespace XilftenBot
                                     //Update the Interaction Response with the Embed
                                     await ctx.EditResponseAsync(wh);
                                 }
-                                else if (path == "") //If we do not have a path then the show is not on the server, Check to see if we should add it and add it if we should.
+                                else  
                                 {
-                                    //Create an Embed to send
-                                    var em = new DiscordEmbedBuilder
-                                    {
-                                        Color = DiscordColor.Red,
-                                        Title = $"{seriesDeserializedGet.title}",
-                                        Url = "https://www.imdb.com/title/" + imdbId,
-                                        Description = $"This show is not on the server."
-                                    };
-
-                                    //If we have an IMDB ID, add it to the Embed.
-                                    if (imdbId != "")
-                                    {
-                                        em.WithUrl("https://www.imdb.com/title/" + imdbId);
-                                    }
-                                    em.AddField("Status: ", $"{seriesDeserializedGet.status}", true);
-                                    em.AddField("Network: ", $"{seriesDeserializedGet.network}", true);
-                                    em.AddField("First Aired: ", $"{seriesDeserializedGet.firstAired}", true);
-                                    em.AddField("Overview: ", $"{seriesDeserializedGet.overview}", false);
-                                    em.Build();
-
-                                    //Create the Webhook and add the Embed.
-                                    var wh = new DiscordWebhookBuilder();
-                                    wh.AddEmbed(em);
-
-                                    //Update if Request was added, and add it to the Requests List.
-                                    newRequest.wasAdded = true;
-
-                                    Xilften.WriteToLog($"{member.Username} requested show {seriesDeserializedGet.title} it did not Exist on the Server.");
-                                    Xilften.requests.Add(DateTime.Now, newRequest);
-                                    //Update the Interaction Response with the Embed
-                                    await ctx.EditResponseAsync(wh);
-                                }   
-                                {
+                                    Console.WriteLine("NOT on server Triggered");
                                     // Building Embed
                                     var em = new DiscordEmbedBuilder
                                     {
@@ -187,12 +171,17 @@ namespace XilftenBot
                                     em.AddField("Status: ", $"{seriesDeserializedGet.status}", true);
                                     em.AddField("Network: ", $"{seriesDeserializedGet.network}", true);
                                     em.AddField("First Aired: ", $"{seriesDeserializedGet.firstAired}", true);
-                                    em.AddField("Overview: ", $"{seriesDeserializedGet.overview}", false);
+                                    // cut overview to fit incase its too long.
+                                    string _overview = seriesDeserializedGet.overview.Length > 1000
+                                        ? seriesDeserializedGet.overview.Substring(0, 1000)
+                                        : seriesDeserializedGet.overview;
 
-                                    //Creates a Blank Field to make the Embed look better
-                                    em.AddField("\u200b", "\u200b");
+                                    em.AddField("Overview: ", $"{_overview}", false);
 
-                                    Console.WriteLine($"The show {seriesDeserializedGet.title} was added to Sonarr.");
+                                    ////Creates a Blank Field to make the Embed look better
+                                    //em.AddField("\u200b", "\u200b");
+
+                                    
 
                                     em.AddField($"{member.Username},", $"React with {emoji} within 30 seconds to add {seriesDeserializedGet.title} to the server!", false);
                                     em.Build();
@@ -208,6 +197,8 @@ namespace XilftenBot
                                     //waiting for reaction
                                     var result = await message.WaitForReactionAsync(ctx.Member, emoji);
 
+
+
                                     //if reacted to in time Send Add Post to Server
                                     if (!result.TimedOut)
                                     {
@@ -216,21 +207,49 @@ namespace XilftenBot
                                         string postUrl = Xilften.sonarrIP + $"api/v3/series";
 
                                         seriesDeserializedGet.rootFolderPath = Xilften.sonarrRootPath;
+                                        seriesDeserializedGet.qualityProfileId = 1;
                                         seriesDeserializedGet.SetAddOptions(searchForMissingEpisodes, monitor, searchForCutoffUnmetEpisodes);
 
                                         string updatedPost = JsonConvert.SerializeObject(seriesDeserializedGet, Formatting.Indented);
                                         var payload = new StringContent(updatedPost, Encoding.UTF8, "application/json");
-                                        var postResponse = httpClient.PostAsync(postUrl, payload).Result.Content.ReadAsStringAsync();
-                                        var postResults = postResponse.Result;
+
+                                        // Clear and set correct headers
+                                        httpClient.DefaultRequestHeaders.Accept.Clear();
+                                        httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                                        // Make the POST request the *right* way
+                                        HttpResponseMessage response1 = await httpClient.PostAsync(postUrl, payload);
+
+                                        // Read the response content
+                                        string postResults = await response1.Content.ReadAsStringAsync();
+
 
 
                                         //Here we check to see if post returned successfully
-                                        if (postResponse.IsCompletedSuccessfully)
+                                        if (response1.IsSuccessStatusCode)
                                         {
-                                            Console.WriteLine("Post sent and response Recieved Successfully. ");
+                                            Console.WriteLine("Post sent and response Received Successfully. ");
 
 
-                                            await ctx.Channel.SendMessageAsync($"The show {seriesDeserializedGet.title} is adding to the server. Allow 1 hour per season for it to update");
+                                            var ef = new DiscordEmbedBuilder
+                                            {
+                                                Color = DiscordColor.SpringGreen,
+                                                Title = $"{seriesDeserializedGet.title}",
+                                                Url = "https://www.imdb.com/title/" + imdbId,
+                                                Description = $"Show was added to server."
+                                            };
+
+
+                                            ef.AddField("Note:", $"Allow 1 hour per season for it to update.", true);
+                                            ef.Build();
+
+                                            var hh = new DiscordWebhookBuilder();
+                                            hh.AddEmbed(ef);
+
+
+
+                                            //await ctx.Channel.SendMessageAsync($"The show {seriesDeserializedGet.title} is adding to the server. Allow 1 hour per season for it to update");
+                                            await ctx.Channel.SendMessageAsync(ef);
                                             newRequest.wasAdded = true;
                                             Xilften.WriteToLog($"{member.Username} requested show {seriesDeserializedGet.title} it Existed on the Server.");
 
@@ -239,10 +258,11 @@ namespace XilftenBot
 
 
                                         }
-                                        else   //If not successful sernd error message
+                                        else   //If not successful send error message
                                         {
-                                            Console.WriteLine("Post sent and response Recieved Error. ");
-
+                                            Console.WriteLine("Post sent and response Received Error. ");
+                                            Console.WriteLine($"Status Code: {response1.StatusCode}");
+                                            Console.WriteLine($"Raw Response:\n{postResults}");
                                             await ctx.Channel.SendMessageAsync("There was an error adding the show");
 
                                             newRequest.wasAdded = false;

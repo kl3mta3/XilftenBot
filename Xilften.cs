@@ -22,20 +22,24 @@ namespace XilftenBot
         //Sonarr Var
         public static string sonarrIP = ConfigurationManager.AppSettings.Get("SonarrIP");
         public static string sonarrAPI = ConfigurationManager.AppSettings.Get("SonarrAPIKey");
+
         public static string sonarrRootPath ="";
         public  static  bool sonarrActivated=false;
 
         //Radarr var
         public static string radarrIP = ConfigurationManager.AppSettings.Get("RadarrIP");
         public static string radarrAPI = ConfigurationManager.AppSettings.Get("RadarrAPIKey");
+
         public static string radarrRootPath = "";
         public static bool radarrActivated = false;
 
         //Discord var
         public static string discordBotToken = ConfigurationManager.AppSettings.Get("Token");
+        
 
         //Discord Guild Id
         public static ulong guildID = ulong.Parse(ConfigurationManager.AppSettings.Get("GuildId"));
+        
 
         // local appdata path
         public static string appDataFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
